@@ -1,1 +1,3 @@
-submit ur tasks and remember to add your name in the readme.md file also name ur file correctly
+Submit your tasks and remember to add your name in the README.md file.
+
+Name your project file/folder same as your name...
