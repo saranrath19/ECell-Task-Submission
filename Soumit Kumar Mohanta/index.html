@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ID Card Generator</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <section class="form-section" aria-label="Member Registration Form">
+      <h1 class="glow">Add Member</h1>
+      <form id="memberForm" autocomplete="off" novalidate>
+        <div class="input-group">
+          <input type="text" id="name" name="name" placeholder=" " required minlength="3" />
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" name="email" placeholder=" " pattern="@" required />
+          <label for="email">E-mail ID</label>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="designation" name="designation" placeholder=" " required minlength="2" />
+          <label for="designation">Branch</label>
+        </div>
+
+        <div class="input-group">
+          <input type="file" id="photoFile" name="photoFile" accept="image/*" />
+          <label for="photoFile" style="top:-8px; font-size:0.85rem; color:#00bcd4; user-select:none; ;">Select Photo (Optional)</label>
+        </div>
+
+        <button type="submit" id="generateCardBtn">Generate ID Card</button>
+      </form>
+    </section>
+    <section aria-label="Generated ID Cards" class="cards" id="cardsContainer" aria-live="polite" aria-relevant="additions">
+      <!-- Generated ID cards will be inserted here -->
+    </section>
+      <section class="footer">
+        &copy Made By Soumit Kumar Mohanta</section>
+  </main>
+<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</body>
+</html>
