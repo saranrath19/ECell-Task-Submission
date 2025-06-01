@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Intro to AI",
+    "day": "Day 1",
+    "category": "Talk",
+    "description": "A beginner's session on Artificial Intelligence."
+  },
+  {
+    "name": "Web Dev Workshop",
+    "day": "Day 1",
+    "category": "Workshop",
+    "description": "Hands-on workshop to build your first website."
+  },
+  {
+    "name": "Cybersecurity Talk",
+    "day": "Day 2",
+    "category": "Talk",
+    "description": "Learn the basics of staying safe online."
+  },
+  {
+    "name": "Robotics Workshop",
+    "day": "Day 2",
+    "category": "Workshop",
+    "description": "Build and program a simple robot!"
+  }
+]

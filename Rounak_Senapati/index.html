@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Filter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="header startAnimation-1">
+      <span >Event</span>
+      <span>Filter</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="nameFilter" placeholder="Search by name..." />
+      <select id="dayFilter" class="btn">
+        <option value="">All Days</option>
+        <option value="Day 1">Day 1</option>
+        <option value="Day 2">Day 2</option>
+      </select>
+
+      <select id="categoryFilter" class="btn">
+        <option value="">All Categories</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Talk">Talk</option>
+      </select>
+    </div>
+
+    <div class="event-list" id="eventList"></div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content" id="popupContent">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h3 id="popupTitle"></h3>
+        <p><strong>Day:</strong> <span id="popupDay"></span></p>
+        <p><strong>Category:</strong> <span id="popupCategory"></span></p>
+        <p id="popupDescription"></p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
