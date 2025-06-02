@@ -1,0 +1,320 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+   
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0,0,0,1), rgba(87,124,253,0.89));
+      background-size: 200% 200%;
+      /*background-color: #111827;*/
+      display: flex;
+      justify-content:center;
+      align-items: flex-start;
+     /* background-color: white;*/
+      min-height: 100vh;
+      padding: 40px 20px;
+      padding-bottom: 13px;
+      color: #f0f0f0;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* Form section animations and styling */
+    .form-section {
+      border-radius: 15px;
+      padding: 50px 40px 40px 40px;
+      box-shadow: 0 1px 20px rgba(117, 164, 176, 0.842);
+      color: #fafafa;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeSlideIn 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .form-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient( -45.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+      border-radius: 15px;
+      border-color: #2d3746;
+      z-index: 0;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-section h1 {
+      margin: 0 0 40px 0;
+      font-weight: 700;
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+      letter-spacing: 1.1px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    /* Floating label input container */
+    .input-group {
+      position: relative;
+      flex: 1 1 100%;
+    }
+
+    /* Hide default input background for file */
+    input[type="file"] {
+      background: #1f2937;
+      padding-left: 15px;
+      color: #222;
+    }
+    label {
+      position: absolute;
+      left: 15px;
+      top: 14px;
+      color: #bbb;
+      font-weight: 400;
+      font-size: 1.05rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      padding: 0 6px;
+      text-shadow: 0 0 3px rgba(0,0,0,0.3);
+      border-radius: 4px;
+      user-select: none;
+      z-index: 2;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    input[type="email"]{
+      width: 100%;
+      padding: 16px 15px 10px 15px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border-color: rgb(229, 231, 235);
+      transition: box-shadow 0.3s ease;
+      background: #1f2937;
+      color: #fafafa;
+      user-select: text;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* When input is focused or has content, float label up */
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 0.85rem;
+      color: #00bcd4;
+      text-shadow: none;
+      background-color: white;
+      box-shadow: 0 0 8px 1px #00bcd4;
+      padding: 0 6px;
+    }
+
+    input[type="text"]:focus,
+    input[type="file"]:focus,
+    input[type="email"]:focus{
+      box-shadow: 0 0 12px 3px #00bcd4;
+      animation: glowPulse 1.5s ease infinite alternate;
+    }
+    @keyframes glowPulse {
+      from {
+        box-shadow: 0 0 8px 2px #00bcd4;
+      }
+      to {
+        box-shadow: 0 0 16px 5px #00bcd4;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background-image: linear-gradient(to right, #4b6cb7 0%, #182848  51%, #4b6cb7  100%);
+      color: white;
+      border: none;
+      transition: 1s;
+       background-size: 200% auto;
+      border-radius: 8px;
+      padding: 14px 30px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      flex: 1 1 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      display: block;
+      box-shadow: 0 6px 15px rgba(1, 44, 109, 0.6);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 1px;
+    }
+    button:hover {
+      background-position: right center; /* change the direction of the change here */
+    transition: 0.7s;
+    color: #fff;
+    text-decoration: none;
+    }    
+
+      section.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-top: 20px;
+    }
+    .cards {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      min-height: 220px;
+    }
+
+    .id-card {
+      background: radial-gradient( circle 404px at 20.3% 15.9%,  rgba(0,79,255,1) 15%, rgba(0,240,255,1) 90% );
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+      overflow: hidden;
+      width: 260px;
+      aspect-ratio: 3 / 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+    .id-card:hover,
+    .id-card:focus {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.22);
+      outline: none;
+    }
+
+    .id-card .photo {
+      width: 100%;
+      height: 140px;
+      border-radius: 15px;
+      background-color: #e0e0e0;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: -46px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .id-card .name {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin: 86px 0 6px 0;
+      text-align: center;
+      color: #fafafa;
+    }
+
+    .id-card .designation {
+      font-weight: 60;
+      font-size: 1.1rem;
+      color: #fafafa;
+      margin-bottom: 4px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .id-card .id-number {
+      font-size: 1rem;
+      font-weight: 50;
+      color: #ffffff;
+      text-align: center;
+      letter-spacing: 1.3px;
+      user-select: text;
+      margin-bottom: 12px;
+      position: relative;
+      line-break:anywhere;
+    }
+    .id-card .buttons {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    }
+    .id-card button {
+      flex: 1;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 0;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .delete-btn {
+      background: #b11908;
+    }
+    .delete-btn:hover,
+    .delete-btn:focus {
+      background: #f3210a;
+      outline: none;
+      box-shadow: 0 0 14px #ff3822;
+    }
+    .download-btn {
+      background: #0d942f;
+    }
+    .download-btn:hover,
+    .download-btn:focus {
+      background: #2fcc07;
+      outline:#2fcc07;
+      box-shadow: 0 0 14px #0dd460;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 10px;
+      }
+      .form-section {
+        padding: 40px 25px 30px 25px;
+      }
+      .id-card {
+        width: 100%;
+        aspect-ratio: auto;
+        flex-direction: row;
+        padding: 15px;
+      }
+      .id-card .photo {
+        width: 100px;
+        height: 120px;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+      .id-card .details {
+        flex: 1;
+      }
+      .id-card .buttons {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .id-card button {
+        width: 100%;
+        flex: none;
+      }
+  }
